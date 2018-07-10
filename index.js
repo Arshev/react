@@ -1,3 +1,9 @@
-import { getSum } from './src/newModule';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-console.log(getSum(20, 20));
+import Hello from './src/hello';
+
+ReactDOM.render(
+    <Hello />,
+    document.getElementById('root')
+);
