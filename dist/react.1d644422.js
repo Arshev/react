@@ -19792,7 +19792,49 @@ var Hello = function (_Component) {
 }(_react.Component);
 
 exports.default = Hello;
-},{"react":7}],2:[function(require,module,exports) {
+},{"react":7}],30:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Calc = function () {
+    function Calc() {
+        _classCallCheck(this, Calc);
+    }
+
+    _createClass(Calc, [{
+        key: "summ",
+        value: function summ(firstNumber, secondNumber) {
+            return firstNumber + secondNumber;
+        }
+    }, {
+        key: "substr",
+        value: function substr(firstNumber, secondNumber) {
+            return firstNumber - secondNumber;
+        }
+    }, {
+        key: "mult",
+        value: function mult(firstNumber, secondNumber) {
+            return firstNumber * secondNumber;
+        }
+    }, {
+        key: "division",
+        value: function division(firstNumber, secondNumber) {
+            return firstNumber / secondNumber;
+        }
+    }]);
+
+    return Calc;
+}();
+
+exports.default = Calc;
+},{}],2:[function(require,module,exports) {
 'use strict';
 
 var _react = require('react');
@@ -19807,10 +19849,20 @@ var _Hello = require('./src/Hello');
 
 var _Hello2 = _interopRequireDefault(_Hello);
 
+var _calc = require('./src/calc');
+
+var _calc2 = _interopRequireDefault(_calc);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var result = new _calc2.default();
+console.log(result.summ(10, 10));
+console.log(result.substr(20, 10));
+console.log(result.mult(10, 10));
+console.log(result.division(10, 5));
+
 _reactDom2.default.render(_react2.default.createElement(_Hello2.default, null), document.getElementById('root'));
-},{"react":7,"react-dom":18,"./src/Hello":17}],4:[function(require,module,exports) {
+},{"react":7,"react-dom":18,"./src/Hello":17,"./src/calc":30}],4:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
